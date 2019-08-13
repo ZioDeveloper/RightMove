@@ -102,16 +102,16 @@ namespace RightMove
                     File.Copy(lblFileName.Text, @"T:\FIAT\DERR\MovimentatoFatto\" + aName, true);
                     txtFileContent.Text += Environment.NewLine + "Copiato file : " + lblFileName.Text + @" in " + Environment.NewLine + @" T:\FIAT\DERR\MovimentatoFatto" + Environment.NewLine;
 
-                    File.Delete(@"T:\FIAT\DERR\Movimentato_dwh.TXT");
-                    txtFileContent.Text += Environment.NewLine + @"Cancellato file file : T:\FIAT\DERR\Movimentato_dwh.TXT " ;
+                    
                 }
                 catch (Exception ex)
                 {
                     MessageBox.Show(ex.Message);
                 }
             }
-            
 
+            File.Delete(@"T:\FIAT\DERR\Movimentato_dwh.TXT");
+            txtFileContent.Text += Environment.NewLine + @"Cancellato file file : T:\FIAT\DERR\Movimentato_dwh.TXT ";
 
             string docPath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
             int cnt = 0;
@@ -223,6 +223,10 @@ namespace RightMove
                 
                 
             }
+
+            File.Delete(lblFileName.Text);
+            txtFileContent.Text += Environment.NewLine + @"Cancellato file file : " + lblFileName.Text;
+
             txtFileContent.Text += Environment.NewLine + "N° " + corr.ToString() + " correzzioni apportate " + Environment.NewLine;
             txtFileContent.Text += Environment.NewLine + "Finito alle " + DateTime.Now.ToString();
         }
