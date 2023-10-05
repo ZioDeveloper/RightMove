@@ -34,6 +34,9 @@ namespace RightMove
             this.cmdParse2 = new System.Windows.Forms.Button();
             this.cmdExit = new System.Windows.Forms.Button();
             this.chkCopyFile = new System.Windows.Forms.CheckBox();
+            this.cmdDTS = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // cmdLoad
@@ -57,16 +60,18 @@ namespace RightMove
             // 
             // txtFileContent
             // 
+            this.txtFileContent.BackColor = System.Drawing.Color.Black;
+            this.txtFileContent.ForeColor = System.Drawing.Color.Lime;
             this.txtFileContent.Location = new System.Drawing.Point(13, 53);
             this.txtFileContent.Multiline = true;
             this.txtFileContent.Name = "txtFileContent";
             this.txtFileContent.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.txtFileContent.Size = new System.Drawing.Size(443, 129);
+            this.txtFileContent.Size = new System.Drawing.Size(497, 129);
             this.txtFileContent.TabIndex = 2;
             // 
             // cmdParse2
             // 
-            this.cmdParse2.Location = new System.Drawing.Point(381, 13);
+            this.cmdParse2.Location = new System.Drawing.Point(343, 13);
             this.cmdParse2.Name = "cmdParse2";
             this.cmdParse2.Size = new System.Drawing.Size(75, 24);
             this.cmdParse2.TabIndex = 4;
@@ -76,7 +81,7 @@ namespace RightMove
             // 
             // cmdExit
             // 
-            this.cmdExit.Location = new System.Drawing.Point(381, 191);
+            this.cmdExit.Location = new System.Drawing.Point(435, 196);
             this.cmdExit.Name = "cmdExit";
             this.cmdExit.Size = new System.Drawing.Size(75, 24);
             this.cmdExit.TabIndex = 5;
@@ -97,11 +102,46 @@ namespace RightMove
             this.chkCopyFile.UseVisualStyleBackColor = true;
             this.chkCopyFile.CheckedChanged += new System.EventHandler(this.chkCopyFile_CheckedChanged);
             // 
+            // cmdDTS
+            // 
+            this.cmdDTS.Location = new System.Drawing.Point(435, 13);
+            this.cmdDTS.Name = "cmdDTS";
+            this.cmdDTS.Size = new System.Drawing.Size(75, 24);
+            this.cmdDTS.TabIndex = 7;
+            this.cmdDTS.Text = "DTS exec";
+            this.cmdDTS.UseVisualStyleBackColor = true;
+            this.cmdDTS.Click += new System.EventHandler(this.cmdDTS_Click);
+            // 
+            // label1
+            // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(188, 189);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(94, 13);
+            this.label1.TabIndex = 8;
+            this.label1.Text = "Elaborazione riga :";
+            // 
+            // label2
+            // 
+            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(302, 190);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(16, 13);
+            this.label2.TabIndex = 9;
+            this.label2.Text = "...";
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(463, 226);
+            this.ClientSize = new System.Drawing.Size(527, 232);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.cmdDTS);
             this.Controls.Add(this.chkCopyFile);
             this.Controls.Add(this.cmdExit);
             this.Controls.Add(this.cmdParse2);
@@ -124,6 +164,9 @@ namespace RightMove
         private System.Windows.Forms.Button cmdParse2;
         private System.Windows.Forms.Button cmdExit;
         private System.Windows.Forms.CheckBox chkCopyFile;
+        private System.Windows.Forms.Button cmdDTS;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
     }
 }
 
